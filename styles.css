@@ -694,6 +694,11 @@ footer {
     .value-item {
         flex-basis: 100%;
     }
+    
+    /* Hide the second paragraph in about section on mobile */
+    .about-text p:nth-child(2) {
+        display: none;
+    }
 }
 
 @media (max-width: 576px) {

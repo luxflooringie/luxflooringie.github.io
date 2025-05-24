@@ -254,9 +254,15 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2023 Lux Flooring. All Rights Reserved.</p>
+                <p>&copy; <span id="current-year"></span> Lux Flooring. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
+
+    <!-- JavaScript to update current year in the footer -->
+    <script>
+        // Set the current year in the footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html> 
