@@ -558,6 +558,31 @@ footer {
 .footer-logo p {
     font-size: 0.9rem;
     color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.footer-social {
+    display: flex;
+    margin-top: 20px;
+}
+
+.footer-social .social-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 12px;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.footer-social .social-icon:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-5px);
 }
 
 .footer-links h3,
