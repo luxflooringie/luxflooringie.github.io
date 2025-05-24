@@ -16,16 +16,24 @@
             <div class="logo">
                 <img src="images/logo.png" alt="Lux Flooring Logo">
             </div>
-            <nav>
+            <div class="mobile-toggle">
+                <button id="menu-toggle" aria-label="Toggle navigation menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+            <nav id="navbar">
                 <ul>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#contact" class="cta-button">Contact Us</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
                 </ul>
             </nav>
         </div>
+        <div class="menu-overlay"></div>
     </header>
 
     <section class="hero">
@@ -247,9 +255,9 @@
                         <button type="submit">Subscribe</button>
                     </form>
                     <div class="footer-social">
-                        <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://tiktok.com" target="_blank" class="social-icon"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://www.facebook.com/lets.take.a.new.step/" target="_blank" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/luxflooring_ireland/" target="_blank" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@luxflooring" target="_blank" class="social-icon"><i class="fa-brands fa-tiktok"></i></a>
                     </div>
                 </div>
             </div>
@@ -263,6 +271,55 @@
     <script>
         // Set the current year in the footer
         document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const navbar = document.getElementById('navbar');
+            const menuOverlay = document.querySelector('.menu-overlay');
+            
+            if (menuToggle && navbar) {
+                menuToggle.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    navbar.classList.toggle('active');
+                    
+                    // Toggle overlay
+                    if (menuOverlay) {
+                        if (navbar.classList.contains('active')) {
+                            menuOverlay.style.opacity = '1';
+                            menuOverlay.style.visibility = 'visible';
+                        } else {
+                            menuOverlay.style.opacity = '0';
+                            menuOverlay.style.visibility = 'hidden';
+                        }
+                    }
+                });
+                
+                // Close menu when clicking on a nav link or overlay
+                const navLinks = navbar.querySelectorAll('a');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        menuToggle.classList.remove('active');
+                        navbar.classList.remove('active');
+                        
+                        if (menuOverlay) {
+                            menuOverlay.style.opacity = '0';
+                            menuOverlay.style.visibility = 'hidden';
+                        }
+                    });
+                });
+                
+                // Close menu when clicking on overlay
+                if (menuOverlay) {
+                    menuOverlay.addEventListener('click', function() {
+                        menuToggle.classList.remove('active');
+                        navbar.classList.remove('active');
+                        this.style.opacity = '0';
+                        this.style.visibility = 'hidden';
+                    });
+                }
+            }
+        });
     </script>
 </body>
 </html> 
