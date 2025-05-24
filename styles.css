@@ -110,18 +110,14 @@ header .container {
     align-items: center;
 }
 
-.logo h1 {
-    font-size: 1.8rem;
-    color: var(--primary-color);
-    letter-spacing: 2px;
-    margin-bottom: 0;
+.logo {
+    display: flex;
+    align-items: center;
 }
 
-.logo p {
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-    color: var(--accent-color);
-    margin-bottom: 0;
+.logo img {
+    max-height: 60px;
+    width: auto;
 }
 
 nav ul {
@@ -553,9 +549,9 @@ footer {
     margin-bottom: 40px;
 }
 
-.footer-logo h2 {
-    font-size: 1.8rem;
-    color: var(--primary-color);
+.footer-logo img {
+    max-height: 50px;
+    width: auto;
     margin-bottom: 10px;
 }
 
