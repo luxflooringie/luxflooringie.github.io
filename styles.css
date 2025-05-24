@@ -173,7 +173,7 @@ nav ul li a.cta-button::after {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://placehold.co/1920x1080?text=Luxury+Flooring') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/hero.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -255,7 +255,7 @@ nav ul li a.cta-button::after {
 /* Services Section */
 .services {
     padding: 100px 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://placehold.co/1920x1080?text=Our+Services') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('images/services.jpg') no-repeat center center/cover;
     color: var(--light-color);
 }
 
@@ -352,7 +352,7 @@ nav ul li a.cta-button::after {
 /* Testimonials Section */
 .testimonials {
     padding: 100px 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://placehold.co/1920x1080?text=Testimonials') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('images/testimonials.jpeg') no-repeat center center/cover;
     color: var(--light-color);
 }
 
