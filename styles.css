@@ -688,6 +688,73 @@ footer {
     font-size: 0.9rem;
 }
 
+/* JumpSEO Attribution */
+.attribution {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+.attribution p {
+    margin: 0;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.jumpseo-link {
+    color: var(--accent-color);
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+    padding: 0 2px;
+    transition: all 0.3s ease;
+}
+
+.jumpseo-link:hover {
+    color: #fff;
+}
+
+.jumpseo-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--accent-color);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.jumpseo-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.attribution-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    width: 32px;
+    height: 32px;
+    background-color: var(--accent-color);
+    color: var(--light-color);
+    border-radius: 50%;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.attribution-icon:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
 /* Responsive */
 @media (max-width: 991px) {
     .hero-content h2 {
