@@ -17,11 +17,14 @@ This website was created for Lux Flooring to showcase their premium flooring ser
 - Contact form with service selection
 - Newsletter subscription
 - Social media integration
+- Mobile-friendly hamburger menu navigation
+- SEO and social media sharing optimized
 
 ## Technologies Used
 
 - HTML5
 - CSS3
+- JavaScript
 - Google Fonts (Playfair Display and Poppins)
 - Font Awesome icons
 
@@ -30,6 +33,10 @@ This website was created for Lux Flooring to showcase their premium flooring ser
 1. Clone the repository
 2. Open `index.html` in your browser
 3. Customize the content as needed
+
+## Open Graph Image
+
+The website includes Open Graph meta tags for better social media sharing. You should create and add a high-quality image file at `images/og-image.jpg` to represent the website when shared on social media platforms. Recommended size is 1200×630 pixels.
 
 ## Placeholder Images
 
