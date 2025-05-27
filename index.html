@@ -226,18 +226,22 @@
                 </div>
                 <div class="contact-form">
                     <h3>Request a Quote</h3>
-                    <form>
+                    <form action="https://formspree.io/f/xvgaeoqe" method="POST">
+                        <input type="hidden" name="_subject" value="New Quote Request from Lux Flooring Website">
+                        <input type="hidden" name="_next" value="https://luxflooring.ie/thanks.html">
+                        <!-- Honeypot field to prevent spam -->
+                        <input type="text" name="_honey" style="display:none">
                         <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
+                            <input type="text" name="name" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
                         </div>
                         <div class="form-group">
-                            <input type="tel" placeholder="Your Phone">
+                            <input type="tel" name="phone" placeholder="Your Phone">
                         </div>
                         <div class="form-group">
-                            <select required>
+                            <select name="service" required>
                                 <option value="" disabled selected>Select Service</option>
                                 <option value="stairs">Custom Stairs</option>
                                 <option value="laminate">Laminate Floors</option>
@@ -246,7 +250,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <textarea placeholder="Tell us about your project" rows="5" required></textarea>
+                            <textarea name="message" placeholder="Tell us about your project" rows="5" required></textarea>
                         </div>
                         <button type="submit" class="submit-button">Submit Request</button>
                     </form>
